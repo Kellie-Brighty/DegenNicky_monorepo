@@ -1,6 +1,8 @@
 import { deployERC20TokenTool } from "./deployERC20Token";
 import { getBalanceTool } from "./getBalance";
 import { getBotWalletBalanceTool } from "./getBotWalletBalance";
+import { getDexscreenerTrendsTool } from "./getDexScreenerTrends";
+import { getMemeTokenTrendsTool } from "./getNewTokenTrends";
 import { getBotWalletAddressTool } from "./getWalletAddress";
 import { sendTransactionTool } from "./sendTransaction";
 
@@ -26,4 +28,6 @@ export const tools: Record<string, ToolConfig> = {
   send_transaction: sendTransactionTool,
   get_bot_wallet_balance: getBotWalletBalanceTool,
   deploy_erc20_token: deployERC20TokenTool,
+  get_meme_token_trends: getMemeTokenTrendsTool,
+  get_dexscreener_trends: getDexscreenerTrendsTool,
 };

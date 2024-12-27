@@ -15,7 +15,9 @@ async function main() {
     output: process.stdout,
   });
 
-  console.log("Welcome to the AI chat! Type 'exit' to end the conversation.");
+  console.log(
+    "Welcome to chat with Nicky! Type 'exit' to end the conversation."
+  );
 
   let threadId: string | undefined = undefined;
 
@@ -37,10 +39,10 @@ async function main() {
       const run = await createRun(client, thread, assistant.id);
       const result = await performRun(client, thread, run);
 
-      if ('text' in result) {
-        console.log(`AI: ${JSON.stringify(result.text.value)}`);
+      if ("text" in result) {
+        console.log(`Nicky: ${JSON.stringify(result.text.value)}`);
       } else {
-        console.log("AI: [Non-text response]");
+        console.log("Nicky: [Non-text response]");
       }
     } catch (error) {
       console.error(`Error: ${error instanceof Error ? error.message : error}`);
